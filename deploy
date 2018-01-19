@@ -10,6 +10,6 @@ git add *
 git commit -m "regen for $REV"
 git push
 cd ..
-rm -r _public
-rm -r _middle2
-rm -r _master
+rm -rf _public
+rm -rf _middle2
+rm -rf _master
