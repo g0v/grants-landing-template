@@ -20,7 +20,7 @@ html
     link(href="//fonts.googleapis.com/css?family=Asap:400",rel="stylesheet",type="text/css")
     script(src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-53936.js")
   body
-    nav.navbar.navbar-expand-lg.navbar-light.navbar-dark.fixed-top
+    nav.navbar.navbar-expand-lg.navbar-dark.fixed-top
       a.navbar-brand(href="/") 專案名稱
       button.navbar-toggler(type="button",data-toggle="collapse",data-target="#navbarSupportedContent")
         span.navbar-toggler-icon
@@ -59,11 +59,14 @@ html
       .text-center: h2 為什麼要做這個專案？
       p 使用者了解了這是什麼專案以後，再來說明清楚為什麼要做這件事，為什麼要這樣做，做了可以帶來什麼好處。除了單純的文字，亦可穿插各種資源，例如影片、插畫、螢幕錄影、互動式體驗等等。
       p 下面的這一個例子可以想像成是一個插入的影片或插圖的效果，配合右方的敘述文字理解裡面想要表達的重點，亦從左方的數位內容營造出更具吸引人的效果。
+      br
       .row
-        .col: div(style="height:300px;border:1px solid #ccc;")
+        .col: .media-preview(style="background:url(img/shaq.gif) center center no-repeat #444;background-size:cover")
         .col
           h4 就像是這樣
-          p 左邊可以放張圖、放個影片、放個動畫等等的東西，甚至有實際可以操作的實例。
+          .sep.light-dark.gap-sm
+          p 左邊可以放一張圖、放個影片、放個動畫等等的東西，甚至有實際可以操作的實例，效果通常都會不錯喔！
+          .pull-right.mr-3: a(href="#"): small 了解更多的按鈕 #[i.fa.fa-arrow-right]
     .section.bg-danger.text-light: .inner.text-center
       h2 我們的成果
       p 利用一些明確的數字可以給人更具體的感覺
@@ -79,6 +82,7 @@ html
     .section: .inner
       .text-center: h2 提供的選項有哪些？
       p 如果你的專案做了許多事想要火力展示，卻又不適合寫一大堆東西的時候，做成迷你表列會更適合。
+      br
       .row
         each item in [["Runtime","birthday-cake"],["Redis","bus"],["Scale","camera"],["Add-ons","calculator"],["Storage","bullhorn"],["AI","check-circle"],["Extensibility","cloud"],["Github","binoculars"]]
           .col-3
@@ -108,5 +112,6 @@ html
               .item: a(href="#") 隱私權政策
               .item: a(href="#") 聯絡窗口
             .col
-        .col-4
-          span power by g0v
+        .col-4.text-center
+          img(src="img/g0v-bg-dark.svg",style="width:100px")
+          div powered by g0v
