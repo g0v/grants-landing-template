@@ -1,0 +1,15 @@
+//- module
+- var trivia = yaml("module/trivia.yaml")
+.section.section-trivia: .inner
+  .text-center: h2 您需要的都在這裡了
+  p Middle2 提供最常用的 PaaS 選項，包涵多程式語言支援、自訂網域等，讓您的專案不受挶限，自由發展，全力專注在推進公民科技上。
+  br
+  .row
+    each item in trivia
+      .col-3
+        .media
+          i.fa.mr-2.mt-1(class="fa-" + item.icon)
+          .media-body
+            span.name: b #{item.name}
+            p(style="line-height:1.4em;font-size:0.6em;color:#444") #{item.desc}
+
