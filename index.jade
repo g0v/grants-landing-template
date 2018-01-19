@@ -1,0 +1,112 @@
+doctype html
+html
+  head
+    meta(property="og:locale",content="zh_TW")
+    meta(property="og:title",content="獎助金專案樣板")
+    meta(property="og:type",content="article")
+    meta(property="og:url",content="https://g0v.github.io/grants-landing-template")
+    meta(property="og:image",content="https://g0v.github.io/grants-landing-template/img/thumbnail.jpg")
+    meta(property="og:image:type",content="image/jpg")
+    meta(property="og:image:width",content="1084")
+    meta(property="og:image:height",content="631")
+    meta(property="og:description",content="獎助金專案專用的一頁式專案說明樣板")
+    meta(property="article:author",content="zbryikt")
+    meta(property="article:section",content="Taiwan")
+    meta(charset="utf-8")
+    link(rel="stylesheet",type="text/css",
+    href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css")
+    link(rel="stylesheet",href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css")
+    link(rel="stylesheet",type="text/css",href="index.css")
+    link(href="//fonts.googleapis.com/css?family=Asap:400",rel="stylesheet",type="text/css")
+    script(src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-53936.js")
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.navbar-dark.fixed-top
+      a.navbar-brand(href="/") 專案名稱
+      button.navbar-toggler(type="button",data-toggle="collapse",data-target="#navbarSupportedContent")
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active: a.nav-link(href="#") 關於專案
+          li.nav-item.active: a.nav-link(href="#") 如何參與
+          li.nav-item.active: a.nav-link(href="#") 新手教學
+          li.nav-item.active: a.nav-link(href="#") 關於專案
+    .jumbotron.text-light
+      .text-center
+        h1.mb-2 具有說服力的一具短話
+        div(style="border-bottom:1px solid rgba(255,255,255,0.3);margin:20px")
+        p 再稍微細節一點解釋這個專案的幾句話，以一到兩行的長度為主
+        br
+        .btn.btn-danger.btn-lg(style="width:280px") 現在就開始使用
+    .section.bg-warning: .inner
+      .text-center: h2 什麼是這個專案？
+      p 簡單扼要的說明這個專案是什麼，或者輔以一些實例、一些使用情境。比方說，Cofact ( 在截稿日前 ) 的首頁只有一個文章列表，就需要一個更清楚的說明。
+      p 分項式的說明可以更聚焦地說明專案的特色或要點，也可以附上圖示 ( optional )：
+    .section.features: .inner
+      .row
+        .col-md
+          .text-center: i.icon.fa.fa-wheelchair-alt
+          .text-center: h5 只需改字即可實用
+          p 重點文字直接用說明方式表達出來，方便用戶直接修改內文後立即套用。
+        .col-md
+          .text-center: i.icon.fa.fa-list
+          .text-center: h5 內容的架構已預定
+          p 敘事基本架構先準備好，照著內文的思路編排，可確保基本內容流暢。
+        .col-md
+          .text-center: i.icon.fa.fa-code
+          .text-center: h5 開源自取且恰當授權
+          p 開源於零時政府源碼庫，直接分支就可以使用，不用擔心找不到源碼。
+    .section.bg-light: .inner
+      .text-center: h2 為什麼要做這個專案？
+      p 使用者了解了這是什麼專案以後，再來說明清楚為什麼要做這件事，為什麼要這樣做，做了可以帶來什麼好處。除了單純的文字，亦可穿插各種資源，例如影片、插畫、螢幕錄影、互動式體驗等等。
+      p 下面的這一個例子可以想像成是一個插入的影片或插圖的效果，配合右方的敘述文字理解裡面想要表達的重點，亦從左方的數位內容營造出更具吸引人的效果。
+      .row
+        .col: div(style="height:300px;border:1px solid #ccc;")
+        .col
+          h4 就像是這樣
+          p 左邊可以放張圖、放個影片、放個動畫等等的東西，甚至有實際可以操作的實例。
+    .section.bg-danger.text-light: .inner.text-center
+      h2 我們的成果
+      p 利用一些明確的數字可以給人更具體的感覺
+      .sep(style="border-bottom:1px solid rgba(255,255,255,0.6);margin:40px auto;width:150px")
+      .row
+        .col #[.huge 5] 次成果發表
+        .col #[.huge 9] 個實用案例
+        .col #[.huge 33] 個社群提起
+        .col #[.huge 2] 次實體活動
+    .section.photos: .inner
+      each i in [1,2,3,4,5,6]
+        .photo(style="background-image:url(img/gallery/" + i + ".jpg)"): .mask
+    .section: .inner
+      .text-center: h2 提供的選項有哪些？
+      p 如果你的專案做了許多事想要火力展示，卻又不適合寫一大堆東西的時候，做成迷你表列會更適合。
+      .row
+        each item in [["Runtime","birthday-cake"],["Redis","bus"],["Scale","camera"],["Add-ons","calculator"],["Storage","bullhorn"],["AI","check-circle"],["Extensibility","cloud"],["Github","binoculars"]]
+          .col-3
+            .media
+              i.fa.mr-2.mt-1(class="fa-" + item[1])
+              .media-body
+                span.name: b #{item[0]}
+                p(style="line-height:1.4em;font-size:0.6em;color:#444") 可以簡單介紹一下 #{item[0]}，長度不拘但各項間可以對齊。
+    .section.bg-danger.text-light: .inner.text-center
+      h2 要怎麼開始呢
+      p 何不放些文件與說明呢？請考慮到完全陌生的使用者，進入門檻跟上手的複雜度。
+      br
+      .btn.btn-light.btn-lg 現在就開始
+    .section.bg-dark.text-light.footer: .inner
+      .row
+        .col-8
+          .row
+            .col
+              label 本專案
+              .item: a(href="#") 關於我們
+              .item: a(href="#") 原始提案
+              .item: a(href="#") 源碼庫
+              .item: a(href="#") 社群專頁
+            .col
+              label 約定事項
+              .item: a(href="#") 使用條款
+              .item: a(href="#") 隱私權政策
+              .item: a(href="#") 聯絡窗口
+            .col
+        .col-4
+          span power by g0v
