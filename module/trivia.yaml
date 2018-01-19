@@ -1,0 +1,24 @@
+- name: 開放源碼
+  icon: code
+  desc: 想開 PaaS 嗎？Middle2 的原始碼開放使用。
+- name: 多語系支援
+  icon: language
+  desc: 支援 PHP、nodejs、Python、Ruby 等語言
+- name: 支源套件系統
+  icon: cog
+  desc: 支援 nodejs package.json、Python requirements.txt、Ruby Gemfile 等相依套件設定檔
+- name: 預建資料庫
+  icon: database
+  desc: 可建立 MySQL 、PostgreSQL、ElasticSearch 等資料庫使用
+- name: 環境設定
+  icon: sliders
+  desc: 可透過 env 環境變數指定系統設定，如資料庫帳號密碼，API Key 等，方便程式碼與設定檔分離
+- name: 自訂網域
+  icon: lightbulb-o
+  desc: 支援 Custom domain ，可自訂網址
+- name: 安全連線
+  icon: shield
+  desc: 支援 Let's Encrypt，可幫服務加上 SSL 更安全
+- name: 排程機制
+  icon: tasks
+  desc: 支援 Cron，可以跑需要排程的動作
