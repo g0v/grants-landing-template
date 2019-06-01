@@ -1,12 +1,12 @@
 {
-  "author": "Kirby Wu",
-  "name": "grants-landing-template",
-  "description": "grants default landing page template",
+  "author": "g0vhk-io",
+  "name": "hongkong-extradition",
+  "description": "Extradition Law Amendment in Hong Kong",
   "version": "0.0.1",
-  "homepage": "https://github.com/g0v/grants-landing-template",
+  "homepage": "https://extradition.g0vhk.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/g0v/grants-landing-template"
+    "url": "https://extradition.g0vhk.io"
   },
   "engines": {
     "node": ">=0.12.6",
