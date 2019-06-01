@@ -8,6 +8,7 @@ rm -rf ../_master/.git
 rm -rf ../_middle2/.git
 cp -R ../_master/ ./
 cp -R ../_middle2/ ./middle2/
+echo "extradition.g0vhk.io" > CNAME
 git add * 
 git commit -m "regen for $REV"
 git push
