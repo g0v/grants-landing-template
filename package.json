@@ -3,10 +3,10 @@
   "name": "hongkong-extradition",
   "description": "Extradition Law Amendment in Hong Kong",
   "version": "0.0.1",
-  "homepage": "https://extradition.g0vhk.io",
+  "homepage": "https://github.com/g0vhk-io/hongkong-extradition",
   "repository": {
     "type": "git",
-    "url": "https://extradition.g0vhk.io"
+    "url": "https://github.com/g0vhk-io/hongkong-extradition"
   },
   "engines": {
     "node": ">=0.12.6",
