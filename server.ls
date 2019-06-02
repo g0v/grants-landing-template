@@ -336,9 +336,14 @@ update-file = ->
 
   if type == \jade => 
     des = src.replace /\.jade$/, ".html"
+    console.log(des)
+    if des != "full_timeline.html" =>
+      des = "index.html"
+      src = "index.jade"
+    console.log(des)
     try 
       code = fs.read-file-sync src .toString!
-      if /^\/\/- ?(module|view) ?/.exec(code) => return
+      #if /^\/\/- ?(module|view) ?/.exec(code) => return
       desdir = path.dirname(des)
       if !fs.exists-sync(desdir) or !fs.stat-sync(desdir).is-directory! => mkdir-recurse desdir
       fs.write-file-sync des, jade.render code, {filename: src, basedir: path.join(cwd)} <<< jade-extapi
