@@ -1,8 +1,25 @@
 //- module
 .section.section-news.bg-dark.text-light: .inner
-  .text-center: h2 最新消息
-  ul
-    li: a(href="/news/") 守護香港反送中「撤回惡法 林鄭下台」大遊行！ #[small / 20190609]
-    li: a(href="/news/") 立法會周五加開特別會議討論　林鄭不出席電視辯論 #[small / 20190528]
-    li: a(href="/news/") 林鄭「後期外部勢力加入論」　美國最早修例提出半個月已開腔 #[small / 20190523]
+  script.
+    //fetch('https://www.collaction.hk/api/extradition_objective?token=mzFly3aDBwWQpnJaHol60A2I9lYccTLy92lyN3QorQbfgLkO5ifxauPOuBF1')
+    fetch('/collaction.json')
+    .then(response => response.json())
+    .then(r => {
+      console.log(r);
+      for (var i=0; i<=5; i++) {
+        var post = r.data[i];
+        var postNode = document.createElement("div");
+        postNode.className = "post";
+        postNode.innerHTML = "<h3>" + post.title + " - " + post.datetime + "</h3><br/>" + post.content;
+        document.getElementById("news").appendChild(postNode);
+        var lineNode = document.createElement("div");
+        lineNode.className = "lineSeparator";
+        document.getElementById("news").appendChild(lineNode);
+        var brNode = document.createElement("br");
+        document.getElementById("news").appendChild(brNode);
+      }
+    })
+
+  .text-center: h2 最新消息 #[a(href="/full_timeline.html",target="blank") (按此打開完整時間表 )]
+  #news
 
