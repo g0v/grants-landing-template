@@ -81,6 +81,9 @@ h2 {
 .section-photos .photo:hover .mask {
   opacity: 0;
 }
+.section-news a {
+  color: #9be;
+}
 .section-features {
   padding-top: 90px;
 }
