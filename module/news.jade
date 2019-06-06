@@ -1,8 +1,8 @@
 //- module
 .section.section-news.bg-dark.text-light: .inner
   script.
-    //fetch('https://www.collaction.hk/api/extradition_objective?token=mzFly3aDBwWQpnJaHol60A2I9lYccTLy92lyN3QorQbfgLkO5ifxauPOuBF1')
-    fetch('/collaction.json')
+    fetch('https://www.collaction.hk/api/extradition_objective?token=mzFly3aDBwWQpnJaHol60A2I9lYccTLy92lyN3QorQbfgLkO5ifxauPOuBF1')
+    //fetch('https://assets.collaction.hk/extradition_objective_list.json')
     .then(response => response.json())
     .then(r => {
       console.log(r);
