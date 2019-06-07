@@ -18,6 +18,9 @@ nav {
   text-shadow: 0 0 2px rgba(0,0,0,0.3);
   font-size: 0.9em;
 }
+ul {
+  list-style-type: none;
+}
 .jumbotron {
   height: 100%;
   max-height: 640px;
@@ -26,10 +29,6 @@ nav {
   background: url("img/jumbotron.jpg") center center no-repeat #222;
   background-size: cover;
   border-radius: 0;
-}
-.post {
-  width: 100%;
-  overflow-wrap: break-word;
 }
 .jumbotron .text-center {
   position: absolute;
@@ -98,9 +97,6 @@ h2 {
 .section-features p {
   font-size: 0.9em;
   color: #555;
-}
-.section-footer {
-  background-color: #696969;
 }
 .section-footer a {
   color: #9be;
