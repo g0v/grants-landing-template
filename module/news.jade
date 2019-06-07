@@ -1,12 +1,12 @@
 //- module
+//- #[a(href="/full_timeline.html",target="blank") (按此打開完整時間表 )]
 .section.section-news.bg-dark.text-light: .inner
   script.
     fetch('https://www.collaction.hk/api/extradition_objective?token=mzFly3aDBwWQpnJaHol60A2I9lYccTLy92lyN3QorQbfgLkO5ifxauPOuBF1')
     //fetch('https://assets.collaction.hk/extradition_objective_list.json')
     .then(response => response.json())
     .then(r => {
-      console.log(r);
-      for (var i=0; i<=5; i++) {
+      for (var i=0; i<=10; i++) {
         var post = r.data[i];
         var postNode = document.createElement("div");
         postNode.className = "post";
@@ -20,6 +20,6 @@
       }
     })
 
-  .text-center: h2 最新消息 #[a(href="/full_timeline.html",target="blank") (按此打開完整時間表 )]
+  .text-center: h2 最新消息 #[a(href="https://www.collaction.hk/s/extradition/objective",target="blank") (按此打開完整時間表 )]
   #news
 
