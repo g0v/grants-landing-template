@@ -95,6 +95,9 @@ h2 {
   font-size: 0.9em;
   color: #555;
 }
+.section-footer {
+  background-color: #696969;
+}
 .section-footer a {
   color: #9be;
 }
